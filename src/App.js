@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import "./index.scss";
 
-function App() {
-  //let count = 0;
-
+export const App = () => {
   const [count, setCount] = useState(0);
 
   const onClickPlus = () => {
-    setCount(count + 1);
+    setCount((prev) => prev + 1);
   };
 
   const onClickMinus = () => {
-    setCount(count - 1);
+    setCount((prev) => prev - 1);
   };
 
   return (
@@ -28,6 +27,4 @@ function App() {
       </div>
     </div>
   );
-}
-
-export default App;
+};
